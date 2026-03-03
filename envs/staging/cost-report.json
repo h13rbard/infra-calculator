@@ -1,0 +1,1 @@
+{"costs":{"db":2.08,"flask":4.16},"instances":{"db":{"count":2,"hours":100,"type":"t3.micro"},"flask":{"count":1,"hours":200,"type":"t3.small"}},"total_cost":6.24}

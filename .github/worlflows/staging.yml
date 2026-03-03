@@ -1,0 +1,23 @@
+name: Terraform Staging
+
+on:
+  push:
+    paths:
+      - "envs/staging/**"
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: envs/staging
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: hashicorp/setup-terraform@v3
+
+      - run: terraform init
+      - run: terraform plan
+      - run: terraform apply -auto-approve
